@@ -135,22 +135,21 @@
                 <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
                 <form id="contactForm" class="space-y-6">
                     <div>
-                        <input type="text" placeholder="Your Name" class="contact-input w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors">
+                        <input type="text" name="name" placeholder="Your Name" class="contact-input w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors">
                     </div>
                     <div>
-                        <input type="email" placeholder="Your Email" class="contact-input w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors">
+                        <input type="email" name="email" placeholder="Your Email" class="contact-input w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors">
                     </div>
                     <div>
-                        <textarea placeholder="Your Message" rows="5" class="contact-input w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="5" class="contact-input w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"></textarea>
                     </div>
                     <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-button transition-colors">
                         Send Message
                     </button>
                 </form>
-                
                 <div class="mt-12 text-center">
                     <p class="text-gray-400 mb-4">Or reach out directly via email</p>
-                    <a href="mailto:theyeekltd@gmail.com" class="text-primary hover:text-primary/80 transition-colors">theyeekltd@gmail.com</a>
+                    <a href="mailto:contact@yeek.ltd" class="text-primary hover:text-primary/80 transition-colors">contact@yeek.ltd</a>
                 </div>
             </div>
         </div>
@@ -163,45 +162,36 @@
     </footer>
 
     <script>
-        // Initialize EmailJS with your user token
-    emailjs.init('tsvNTNh_ileWLQeJt'); // Replace 'user_token' with your actual EmailJS user token
+        // Initialize EmailJS with user token
+        emailjs.init('user_token'); // Replace 'user_token' with your EmailJS user token
 
-    // Handle form submission
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
 
-        const formData = new FormData(e.target);
-        const data = {
-            name: formData.get('name'),       // Ensure your input's "name" attribute is set
-            email: formData.get('email'),     // Ensure your input's "email" attribute is set
-            message: formData.get('message')  // Ensure your textarea's "name" attribute is set
-        };
+            const formData = new FormData(e.target);
 
-        emailjs.send('service_kxuhlm5', 'template_pgwrsj2', data) // Replace 'service_id' and 'template_id' with your actual values
-            .then(() => {
-                // Success notification
-                const notification = document.createElement('div');
-                notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg transform transition-transform duration-300';
-                notification.textContent = 'Message sent successfully!';
-                document.body.appendChild(notification);
-
-                // Remove notification after 3 seconds
-                setTimeout(() => notification.remove(), 3000);
-
-                // Reset form fields
-                e.target.reset();
-            })
-            .catch((error) => {
-                // Error notification
-                const notification = document.createElement('div');
-                notification.className = 'fixed bottom-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg transform transition-transform duration-300';
-                notification.textContent = `Failed to send message: ${error.text}`;
-                document.body.appendChild(notification);
-
-                // Remove notification after 3 seconds
-                setTimeout(() => notification.remove(), 3000);
-            });
-    });
+            emailjs.send('service_id', 'template_id', {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                message: formData.get('message'),
+            }) // Replace 'service_id' and 'template_id' with your actual EmailJS credentials
+                .then(() => {
+                    const notification = document.createElement('div');
+                    notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg';
+                    notification.textContent = 'Message sent successfully!';
+                    document.body.appendChild(notification);
+                    setTimeout(() => notification.remove(), 3000);
+                    e.target.reset();
+                })
+                .catch((error) => {
+                    const notification = document.createElement('div');
+                    notification.className = 'fixed bottom-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg';
+                    notification.textContent = `Failed to send message: ${error.text}`;
+                    document.body.appendChild(notification);
+                    setTimeout(() => notification.remove(), 3000);
+                });
+        });
     </script>
 </body>
 </html>
