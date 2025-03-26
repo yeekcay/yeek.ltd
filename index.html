@@ -51,9 +51,9 @@
             <div class="flex items-center justify-between">
                 <a href="https://yeek.ltd"><img src="yeek.ltd.png" alt="yeek.ltd" style="width:70px;height:70px;"></a>
                 <div class="flex gap-8">
-                    <a href="#about" class="hover:text-primary transition-colors cursor-pointer">About</a>
-                    <a href="#portfolio" class="hover:text-primary transition-colors cursor-pointer">Portfolio</a>
-                    <a href="#contact" class="hover:text-primary transition-colors cursor-pointer">Contact</a>
+                    <a href="#about" class="hover:text-primary transition-colors cursor-pointer" data-section="about">About</a>
+                    <a href="#portfolio" class="hover:text-primary transition-colors cursor-pointer" data-section="portfolio">Portfolio</a>
+                    <a href="#contact" class="hover:text-primary transition-colors cursor-pointer" data-section="contact">Contact</a>
                 </div>
             </div>
         </div>
@@ -193,6 +193,34 @@
                     setTimeout(() => notification.remove(), 3000);
                 });
         });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+
+    const handleScroll = () => {
+        let currentSection = '';
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.remove('text-primary');
+            if (link.dataset.section === currentSection) {
+                link.classList.add('text-primary');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+});
     </script>
 </body>
 </html>
