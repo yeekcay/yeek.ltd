@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yeek.ltd - Freelance Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#1e293b'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        html { scroll-behavior: smooth; }
+        .skill-tag:hover { transform: translateY(-2px); }
+        .project-card:hover { transform: translateY(-4px); }
+        .contact-input:focus { border-color: #6366f1; }
+    </style>
+</head>
+<body class="bg-[#121212] text-gray-100 font-['Inter']">
+    <nav class="fixed w-full bg-[#121212]/90 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-3xl font-['Pacifico'] text-white">yeek.ltd</a>
+                <div class="flex gap-8">
+                    <a href="#about" class="hover:text-primary transition-colors cursor-pointer">About</a>
+                    <a href="#portfolio" class="hover:text-primary transition-colors cursor-pointer">Portfolio</a>
+                    <a href="#contact" class="hover:text-primary transition-colors cursor-pointer">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="min-h-screen pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h1 class="text-4xl font-bold">Crafting Digital Experiences</h1>
+                    <p class="text-gray-400 leading-relaxed">
+                        As a passionate freelance developer with over 8 years of experience, I specialize in creating modern, efficient, and user-friendly applications. My expertise spans across web and mobile development, with a strong focus on delivering high-quality solutions that drive business growth.
+                    </p>
+                    <div class="flex flex-wrap gap-3 pt-4">
+                        <span class="skill-tag px-4 py-2 bg-gray-800 rounded-full text-sm transition-transform duration-200 cursor-default">React.js</span>
+                        <span class="skill-tag px-4 py-2 bg-gray-800 rounded-full text-sm transition-transform duration-200 cursor-default">Node.js</span>
+                        <span class="skill-tag px-4 py-2 bg-gray-800 rounded-full text-sm transition-transform duration-200 cursor-default">React Native</span>
+                        <span class="skill-tag px-4 py-2 bg-gray-800 rounded-full text-sm transition-transform duration-200 cursor-default">TypeScript</span>
+                        <span class="skill-tag px-4 py-2 bg-gray-800 rounded-full text-sm transition-transform duration-200 cursor-default">UI/UX Design</span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://public.readdy.ai/ai/img_res/18470c7d8f936fb1f85f97facb239e39.jpg" alt="Developer Workspace" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-20 bg-[#0a0a0a]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12">Recent Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-gray-900 rounded-lg overflow-hidden transition-transform duration-300">
+                    <img src="https://public.readdy.ai/ai/img_res/cb23ecb63bbac82fa0c9ef344598a16a.jpg" alt="E-commerce App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-400 text-sm mb-4">A full-stack e-commerce solution with React and Node.js</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">React</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Node.js</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-gray-900 rounded-lg overflow-hidden transition-transform duration-300">
+                    <img src="https://public.readdy.ai/ai/img_res/e94f916489d2b1d7606f5fd723b1e2ef.jpg" alt="Fitness App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Fitness Tracking App</h3>
+                        <p class="text-gray-400 text-sm mb-4">Mobile app for tracking workouts and nutrition</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">React Native</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Firebase</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Redux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-gray-900 rounded-lg overflow-hidden transition-transform duration-300">
+                    <img src="https://public.readdy.ai/ai/img_res/df5cf9dc5e558d950b3dbf11adccc9ab.jpg" alt="Task Management" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Task Management Platform</h3>
+                        <p class="text-gray-400 text-sm mb-4">Team collaboration and task management solution</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Vue.js</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Express</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="Your Name" class="contact-input w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Your Email" class="contact-input w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors">
+                    </div>
+                    <div>
+                        <textarea placeholder="Your Message" rows="5" class="contact-input w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-button transition-colors">
+                        Send Message
+                    </button>
+                </form>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-gray-400 mb-4">Or reach out directly via email</p>
+                    <a href="mailto:contact@yeek.ltd" class="text-primary hover:text-primary/80 transition-colors">contact@yeek.ltd</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>© 2025 yeek.ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg transform transition-transform duration-300';
+            notification.textContent = 'Message sent successfully!';
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+            
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
