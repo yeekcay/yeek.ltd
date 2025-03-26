@@ -162,22 +162,45 @@
     </footer>
 
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData);
-            
-            const notification = document.createElement('div');
-            notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg transform transition-transform duration-300';
-            notification.textContent = 'Message sent successfully!';
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.remove();
-            }, 3000);
-            
-            e.target.reset();
-        });
+        // Initialize EmailJS with your user token
+    emailjs.init('tsvNTNh_ileWLQeJt'); // Replace 'user_token' with your actual EmailJS user token
+
+    // Handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const data = {
+            name: formData.get('name'),       // Ensure your input's "name" attribute is set
+            email: formData.get('email'),     // Ensure your input's "email" attribute is set
+            message: formData.get('message')  // Ensure your textarea's "name" attribute is set
+        };
+
+        emailjs.send('service_kxuhlm5', 'template_pgwrsj2', data) // Replace 'service_id' and 'template_id' with your actual values
+            .then(() => {
+                // Success notification
+                const notification = document.createElement('div');
+                notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg transform transition-transform duration-300';
+                notification.textContent = 'Message sent successfully!';
+                document.body.appendChild(notification);
+
+                // Remove notification after 3 seconds
+                setTimeout(() => notification.remove(), 3000);
+
+                // Reset form fields
+                e.target.reset();
+            })
+            .catch((error) => {
+                // Error notification
+                const notification = document.createElement('div');
+                notification.className = 'fixed bottom-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg transform transition-transform duration-300';
+                notification.textContent = `Failed to send message: ${error.text}`;
+                document.body.appendChild(notification);
+
+                // Remove notification after 3 seconds
+                setTimeout(() => notification.remove(), 3000);
+            });
+    });
     </script>
 </body>
 </html>
