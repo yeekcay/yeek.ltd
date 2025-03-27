@@ -53,86 +53,73 @@
         .contact-input:focus { border-color: #6366f1; }
     </style>
 </head>
-<body class="font-['Inter']">
-    <nav class="fixed w-full bg-opacity-90 backdrop-blur-sm z-50 border-b">
+<body>
+    <nav class="fixed w-full bg-base-100 bg-opacity-90 backdrop-blur-sm z-50 border-b border-base-300">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <a href="https://yeek.ltd"><img src="yeek.ltd.png" alt="yeek.ltd" style="width:70px;height:70px;"></a>
+                <a href="https://yeek.ltd">
+                    <img src="yeek.ltd.png" alt="yeek.ltd" class="w-16 h-16">
+                </a>
                 <div class="flex gap-8">
-                   <a href="#about" class="nav-link hover:text-primary transition-colors cursor-pointer" data-section="about">About</a>
-                   <a href="#portfolio" class="nav-link hover:text-primary transition-colors cursor-pointer" data-section="portfolio">Portfolio</a>
-                   <a href="#contact" class="nav-link hover:text-primary transition-colors cursor-pointer" data-section="contact">Contact</a>
+                    <a href="#about" class="nav-link hover:text-primary transition-colors" data-section="about">About</a>
+                    <a href="#portfolio" class="nav-link hover:text-primary transition-colors" data-section="portfolio">Portfolio</a>
+                    <a href="#contact" class="nav-link hover:text-primary transition-colors" data-section="contact">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section id="about" class="py-20 pt-32 pb-20">
+    <section id="about" class="py-20 pt-32">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
                     <h1 class="text-4xl font-bold">Crafting Digital Experiences</h1>
-                    <p class="text-gray-400 leading-relaxed">
+                    <p class="leading-relaxed text-base-content">
                         As a passionate freelance developer with over 8 years of experience, I specialize in creating modern, efficient, and user-friendly applications. My expertise spans across web and mobile development, with a strong focus on delivering high-quality solutions that drive business growth.
                     </p>
                     <div class="flex flex-wrap gap-3 pt-4">
-                        <span class="skill-tag px-4 py-2 bg-gray-800 rounded-full text-sm transition-transform duration-200 cursor-default">React.js</span>
-                        <span class="skill-tag px-4 py-2 bg-gray-800 rounded-full text-sm transition-transform duration-200 cursor-default">Node.js</span>
-                        <span class="skill-tag px-4 py-2 bg-gray-800 rounded-full text-sm transition-transform duration-200 cursor-default">React Native</span>
-                        <span class="skill-tag px-4 py-2 bg-gray-800 rounded-full text-sm transition-transform duration-200 cursor-default">TypeScript</span>
-                        <span class="skill-tag px-4 py-2 bg-gray-800 rounded-full text-sm transition-transform duration-200 cursor-default">UI/UX Design</span>
-                        <span class="skill-tag px-4 py-2 bg-gray-800 rounded-full text-sm transition-transform duration-200 cursor-default">Flutter</span>
-                        <span class="skill-tag px-4 py-2 bg-gray-800 rounded-full text-sm transition-transform duration-200 cursor-default">Figma</span>
+                        <span class="skill-tag px-4 py-2 bg-base-200 rounded-full text-sm">React.js</span>
+                        <span class="skill-tag px-4 py-2 bg-base-200 rounded-full text-sm">Node.js</span>
+                        <span class="skill-tag px-4 py-2 bg-base-200 rounded-full text-sm">React Native</span>
+                        <span class="skill-tag px-4 py-2 bg-base-200 rounded-full text-sm">TypeScript</span>
+                        <span class="skill-tag px-4 py-2 bg-base-200 rounded-full text-sm">UI/UX Design</span>
+                        <span class="skill-tag px-4 py-2 bg-base-200 rounded-full text-sm">Flutter</span>
+                        <span class="skill-tag px-4 py-2 bg-base-200 rounded-full text-sm">Figma</span>
                     </div>
                 </div>
-                <div class="relative">
-                    <img src="https://public.readdy.ai/ai/img_res/18470c7d8f936fb1f85f97facb239e39.jpg" alt="Developer Workspace" class="rounded-lg shadow-2xl">
+                <div>
+                    <img src="https://public.readdy.ai/ai/img_res/18470c7d8f936fb1f85f97facb239e39.jpg" alt="Developer Workspace" class="rounded-lg shadow-lg">
                 </div>
             </div>
         </div>
         <button class="btn btn-primary">Test Button</button>
     </section>
 
-    <section id="portfolio" class="py-20 bg-[#0a0a0a]">
+    <section id="portfolio" class="py-20 bg-base-200">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-12">Recent Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card bg-gray-900 rounded-lg overflow-hidden transition-transform duration-300">
+                <div class="project-card bg-base-100 rounded-lg overflow-hidden transition-transform">
                     <img src="https://public.readdy.ai/ai/img_res/cb23ecb63bbac82fa0c9ef344598a16a.jpg" alt="E-commerce App" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">E-commerce Platform</h3>
-                        <p class="text-gray-400 text-sm mb-4">A full-stack e-commerce solution with React and Node.js</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">React</span>
-                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Node.js</span>
-                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">MongoDB</span>
-                        </div>
+                        <p class="text-base-content text-sm mb-4">A full-stack e-commerce solution with React and Node.js.</p>
                     </div>
                 </div>
 
-                <div class="project-card bg-gray-900 rounded-lg overflow-hidden transition-transform duration-300">
+                <div class="project-card bg-base-100 rounded-lg overflow-hidden transition-transform">
                     <img src="https://public.readdy.ai/ai/img_res/e94f916489d2b1d7606f5fd723b1e2ef.jpg" alt="Fitness App" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Fitness Tracking App</h3>
-                        <p class="text-gray-400 text-sm mb-4">Mobile app for tracking workouts and nutrition</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">React Native</span>
-                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Firebase</span>
-                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Redux</span>
-                        </div>
+                        <p class="text-base-content text-sm mb-4">Mobile app for tracking workouts and nutrition.</p>
                     </div>
                 </div>
 
-                <div class="project-card bg-gray-900 rounded-lg overflow-hidden transition-transform duration-300">
+                <div class="project-card bg-base-100 rounded-lg overflow-hidden transition-transform">
                     <img src="https://public.readdy.ai/ai/img_res/df5cf9dc5e558d950b3dbf11adccc9ab.jpg" alt="Task Management" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Task Management Platform</h3>
-                        <p class="text-gray-400 text-sm mb-4">Team collaboration and task management solution</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Vue.js</span>
-                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Express</span>
-                            <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">PostgreSQL</span>
-                        </div>
+                        <p class="text-base-content text-sm mb-4">Team collaboration and task management solution.</p>
                     </div>
                 </div>
             </div>
@@ -145,26 +132,23 @@
                 <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
                 <form id="contactForm" class="space-y-6">
                     <div>
-                        <input type="text" name="name" placeholder="Your Name" class="contact-input w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors">
+                        <input type="text" name="name" placeholder="Your Name" class="input input-bordered w-full">
                     </div>
                     <div>
-                        <input type="email" name="email" placeholder="Your Email" class="contact-input w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors">
+                        <input type="email" name="email" placeholder="Your Email" class="input input-bordered w-full">
                     </div>
                     <div>
-                        <textarea name="message" placeholder="Your Message" rows="5" class="contact-input w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="5" class="textarea textarea-bordered w-full"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-button transition-colors">
-                        Send Message
-                    </button>
+                    <button type="submit" class="btn btn-primary w-full">Send Message</button>
                 </form>
                 <div class="mt-12 text-center">
-                    <p class="text-gray-400 mb-4">Or reach out directly via email</p>
-                    <a href="mailto:contact@yeek.ltd" class="text-primary hover:text-primary/80 transition-colors">contact@yeek.ltd</a>
+                    <p class="text-base-content mb-4">Or reach out directly via email</p>
+                    <a href="mailto:contact@yeek.ltd" class="link link-primary">contact@yeek.ltd</a>
                 </div>
             </div>
         </div>
     </section>
-
     <footer class="py-8 border-t border-gray-800">
         <div class="container mx-auto px-6 text-center text-gray-400">
             <p>© 2025 yeek.ltd. All rights reserved.</p>
