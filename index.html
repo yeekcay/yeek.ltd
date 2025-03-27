@@ -246,13 +246,20 @@
     handleScroll();
 });
 </script>
-<script>
-  window.addEventListener("load", () => {
-    const themes = ["light", "dark", "cupcake", "bumblebee", "emerald", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk"];
-    const randomTheme = themes[Math.floor(Math.random() * themes.length)];
-    document.documentElement.setAttribute("data-theme", randomTheme);
-    console.log(`Random theme applied: ${randomTheme}`);
-  });
-</script>
+<!-- Random Theme Script -->
+  <script>
+    window.addEventListener("load", () => {
+      const themes = [
+        "light", "dark", "cupcake", "bumblebee", "emerald", "synthwave",
+        "retro", "cyberpunk", "valentine", "halloween", "garden", "forest",
+        "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", 
+        "dracula", "cmyk"
+      ];
+      const randomTheme = themes[Math.floor(Math.random() * themes.length)];
+      document.documentElement.setAttribute("data-theme", randomTheme);
+      console.log(`Random theme applied: ${randomTheme}`);
+    });
+  </script>
+</body>
 </body>
 </html>
