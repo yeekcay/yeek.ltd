@@ -11,40 +11,39 @@
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+ <!-- Tailwind Configuration -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#6366f1',
-                        secondary: '#1e293b'
-                    },
-                    borderRadius: {
-                        'none': '0px',
-                        'sm': '4px',
-                        DEFAULT: '8px',
-                        'md': '12px',
-                        'lg': '16px',
-                        'xl': '20px',
-                        '2xl': '24px',
-                        '3xl': '32px',
-                        'full': '9999px',
-                        'button': '8px'
-                    }
-                }
-            }
+      tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            secondary: '#1e293b'
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px'
+          }
         }
-    </script>
-    <script>
-    // Array of DaisyUI themes
+      }
+    }
+  </script>
+
+  <!-- Random Theme Script -->
+  <script>
     const themes = ["light", "dark", "cupcake", "bumblebee", "emerald", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk"];
 
-    // Function to select a random theme
-    const randomTheme = () => themes[Math.floor(Math.random() * themes.length)];
-
-    // Apply the random theme when the page loads
     document.addEventListener("DOMContentLoaded", () => {
-      document.documentElement.setAttribute("data-theme", randomTheme());
+      const randomTheme = themes[Math.floor(Math.random() * themes.length)];
+      document.documentElement.setAttribute("data-theme", randomTheme);
     });
   </script>
     <style>
