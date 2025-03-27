@@ -4,28 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>yeek.ltd - Freelance Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- DaisyUI CDN -->
+      <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Combined Tailwind Configuration -->
   <script>
     tailwind.config = {
-      plugins: [daisyui],
-    }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/daisyui@latest"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
- <!-- Tailwind Configuration -->
-    <script>
-      tailwind.config = {
       theme: {
         extend: {
           colors: {
             primary: '#6366f1',
-            secondary: '#1e293b'
+            secondary: '#1e293b',
           },
           borderRadius: {
             'none': '0px',
@@ -37,22 +26,23 @@
             '2xl': '24px',
             '3xl': '32px',
             'full': '9999px',
-            'button': '8px'
-          }
-        }
-      }
-    }
+            'button': '8px',
+          },
+        },
+      },
+      plugins: [daisyui], // DaisyUI plugin added here
+    };
   </script>
 
-  <!-- Random Theme Script -->
-  <script>
-    window.addEventListener("load", () => {
-  const themes = ["light", "dark", "cupcake", "bumblebee", "emerald", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk"];
-  const randomTheme = themes[Math.floor(Math.random() * themes.length)];
-  document.documentElement.setAttribute("data-theme", randomTheme);
-  console.log(`Random theme applied: ${randomTheme}`);
-});
-  </script>
+  <!-- DaisyUI CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/daisyui@latest"></script>
+
+  <!-- Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
     <style>
         :where([class^="ri-"])::before { content: "\f3c2"; }
         html { scroll-behavior: smooth; 
