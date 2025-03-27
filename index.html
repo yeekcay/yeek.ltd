@@ -46,12 +46,12 @@
 
   <!-- Random Theme Script -->
   <script>
-    const themes = ["light", "dark", "cupcake", "bumblebee", "emerald", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk"];
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const randomTheme = themes[Math.floor(Math.random() * themes.length)];
-      document.documentElement.setAttribute("data-theme", randomTheme);
-    });
+    window.addEventListener("load", () => {
+  const themes = ["light", "dark", "cupcake", "bumblebee", "emerald", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk"];
+  const randomTheme = themes[Math.floor(Math.random() * themes.length)];
+  document.documentElement.setAttribute("data-theme", randomTheme);
+  console.log(`Random theme applied: ${randomTheme}`);
+});
   </script>
     <style>
         :where([class^="ri-"])::before { content: "\f3c2"; }
